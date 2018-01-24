@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+button, input[type=submit] {
+    cursor: pointer;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.form-wrapper,
+.results-wrapper,
+.winners-list-wrapper {
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+}
+
+.winners-list-wrapper ul {
+    list-style-type: decimal;
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 225px;
+}
+
+.winners-list-wrapper ul li {
+    margin-bottom: 5px;
+}
+
+.winners-list-wrapper p {
+    margin: 5px;
+    font-weight: 600;
+}
+
+.form-wrapper legend {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-wrapper .submit {
+    float: right;
+}
+
+.form-wrapper .helper-text {
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 10px;
+}
+
+.form-wrapper label {
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 50px;
+    display: inline-flex;
+}
+
+.form-wrapper input:not([type=submit]) {
+    padding: 4px;
+}
+
+.form-wrapper label, .form-wrapper input:not([type=submit]) {
+    margin: 5px;
+}
+
+.winners-list-wrapper {
+     text-align: center;
+}
+
+.results-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.table td, .table th {
+    border: 1px solid #e6e6e6;
+    text-align: left;
+    padding: 8px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #e6e6e6;
+}
+
+.table tr td:nth-child(1), 
+.table tr th:nth-child(1), 
+.table tr td:nth-child(7) {
+    max-width: 25px;
+    text-align: center;
+}
+
+.winner-box {
+    padding: 10px;
+    text-align: center;
+}
+
+.spin {
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: inline-flex;
+}
+.spin1 {
+    animation-duration: 500ms;
+}
+
+.spin2 {
+    animation-duration: 750ms;
+}
+
+.spin3 {
+    animation-duration: 1000ms;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+

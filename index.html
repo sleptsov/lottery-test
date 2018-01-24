@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lottery</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Lottery</h1>
+
+        <div class="wrapper">
+            <form name="participantForm" id="participantForm" class="form-wrapper" onsubmit="submitForm(event)">
+                <legend>Participant:</legend>
+                <label for="name">Name *</label>
+                <input type="text" name="name" id="name" required>
+                <br>
+                <label for="surname">Surame *</label>
+                <input type="text" name="surname" id="surname" required>
+                <br>
+                <label for="email">Email *</label>
+                <input type="email" name="email" id="email" required>
+                <br>
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone">
+                <br>
+                <label for="bday">Birthday</label>
+                <input type="date" name="bday" id="bday" min="1900-01-01">
+                <br>
+                <label class="helper-text">* Required fields</label>
+                <br>
+                <input type="submit" value="Add" class="submit">
+            </form>
+            <div class="results-wrapper">
+                <button type="button" onclick="randomWinner()">Play</button>
+                <div class="winner-box" id="winner-box">
+                    Click
+                    <strong>Play</strong> to get a winner
+                </div>
+                <button type="button" onclick="resetAll()">Reset</button>
+            </div>
+
+            <div class="winners-list-wrapper">
+                <p>Winners list:</p>
+                <ul id="winner-list"></ul>
+            </div>
+        </div>
+
+        <h3>All participants:</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Birthday</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
