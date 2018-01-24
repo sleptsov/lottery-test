@@ -172,7 +172,6 @@ let selectParticipant = (e) => {
 let randomWinner = () => {
     let delay = Math.floor(Math.random() * maxDelay) + 100;
     let spin = Math.floor(Math.random() * 3) + 1;
-    console.log(delay, spin);
     winnerBox.innerHTML = `
         <h1 class="spin spin${spin}">&#127922;</h1>
         <h1 class="spin spin${spin}">&#127922;</h1>
